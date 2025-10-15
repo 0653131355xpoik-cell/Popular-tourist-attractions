@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>น้ำตกเอราวัณ — Smart Travel App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>.page-header { --page-cover: url('../assets/images/Erawan National Park.jpg'); }</style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">🧭 Smart Travel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">หน้าแรก</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">สถานที่</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="doi-inthanon.html">ดอยอินทนนท์</a></li>
+                <li><a class="dropdown-item" href="khao-yai.html">อุทยานแห่งชาติเขาใหญ่</a></li>
+                <li><a class="dropdown-item" href="khao-sok.html">เขาสก / เขื่อนเชี่ยวหลาน</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../map.html">แผนที่ Interactive</a></li>
+            <li class="nav-item"><a class="nav-link" href="../recommendations.html">ระบบแนะนำ</a></li>
+            <li class="nav-item"><a class="nav-link" href="../about.html">เกี่ยวกับ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-3">
+      <button type="button" class="btn btn-outline-accent btn-sm" onclick="history.back()" aria-label="ย้อนกลับ"><span aria-hidden="true">←</span> ย้อนกลับ</button>
+    </div>
+    
+    <!-- Header -->
+    <header class="page-header">
+      <div class="container">
+        <h1>น้ำตกเอราวัณ (กาญจนบุรี)</h1>
+        <p class="text-secondary-soft">น้ำตก 7 ชั้น — น้ำสีฟ้าเทอร์ควอยซ์</p>
+        <div class="mt-3 d-flex gap-2">
+          <span class="badge">น้ำตก</span>
+          <span class="badge">อุทยานแห่งชาติเอราวัณ</span>
+          <span class="badge">ศรีสวัสดิ์ กาญจนบุรี</span>
+        </div>
+      </div>
+    </header>
+    <main class="py-5"><div class="container">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <!-- Gallery -->
+          <div class="row row-cols-1 row-cols-sm-2 g-3">
+            <div class="col"><img class="w-100 rounded-4 attraction-img" src="../assets/images/Erawan National Park.jpg" alt="Erawan National Park"></div>
+            <div class="col"><img class="w-100 rounded-4 attraction-img" src="../assets/images/Erawan National Park - Copy.jpg" alt="Erawan National Park (อีกมุม)"></div>
+          </div>
+
+          <!-- General info -->
+          <section class="mt-4">
+            <h3 class="section-title">ข้อมูลทั่วไป</h3>
+            <ul>
+              <li>อยู่ในอุทยานแห่งชาติเอราวัณ อำเภอศรีสวัสดิ์ จังหวัดกาญจนบุรี</li>
+              <li>น้ำตก 7 ชั้น น้ำสีฟ้าเทอร์ควอยซ์ จุดเล่นน้ำตามพื้นที่ที่อนุญาต</li>
+              <li>มีทางเดินธรรมชาติและจุดชมวิวบางเส้นทาง</li>
+            </ul>
+          </section>
+
+          <!-- Location & Getting there -->
+          <section class="mt-4">
+            <h3 class="section-title">อยู่ที่ไหน / การเดินทาง</h3>
+            <ul>
+              <li>ที่ตั้ง: อุทยานแห่งชาติเอราวัณ อำเภอศรีสวัสดิ์ จังหวัดกาญจนบุรี (ห่างตัวเมือง ~65 กม.)</li>
+              <li>รถยนต์: จากตัวเมืองกาญจนบุรี ใช้ทางหลวง 3199 มุ่งหน้าเขื่อนศรีนครินทร์ แล้วเข้าทางไปอุทยาน (~1–1.5 ชม.)</li>
+              <li>รถบัส/รถสองแถว: มีรถท้องถิ่นจากสถานีขนส่งกาญจนบุรีไปถึงหน้าทางเข้าอุทยาน (เช็กตารางรอบ)</li>
+              <li>ทัวร์: มีแพ็กเกจเที่ยววันเดียวจากกาญจนบุรี/กรุงเทพฯ รวมรถรับ–ส่ง</li>
+            </ul>
+          </section>
+          <section class="mt-4"><h3 class="section-title">สิ่งที่น่าสนใจ / ไฮไลต์ / กิจกรรม</h3><ul>
+            <li>เดินป่าชมธรรมชาติ</li>
+            <li>เล่นน้ำตามจุดที่อนุญาต</li>
+          </ul></section>
+          <section class="mt-4"><h3 class="section-title">เวลาเปิด / ค่าเข้าชม / ข้อจำกัด</h3><ul>
+            <li>บางชั้นเปิด/ปิดตามฤดูกาลและความปลอดภัย</li>
+          </ul></section>
+          <section class="mt-4"><h3 class="section-title">เคล็ดลับ / คำแนะนำ</h3><ul>
+            <li>รองเท้าพื้นยึดเกาะดีสำหรับทางที่อาจลื่น</li>
+            <li>เล่นน้ำเฉพาะจุดที่อนุญาตและคำนึงถึงความปลอดภัย</li>
+            <li>พกผ้าเช็ดตัว/เสื้อผ้าสำหรับเปลี่ยน</li>
+          </ul></section>
+        </div>
+        <div class="col-lg-4">
+          <div class="card smart-card mt-3"><div class="card-body">
+            <h5 class="card-title">ที่พักแนะนำ (ตัวอย่าง)</h5>
+            <div class="table-responsive">
+              <table class="table">
+                <thead><tr><th>ระดับ</th><th>ชื่อที่พัก</th><th>ราคา/ข้อดี</th></tr></thead>
+                <tbody>
+                  <tr><td>พรีเมียม</td><td><img src="../assets/images/พรีเมียม- X2 River Kwai Resort.jpg" alt="X2 River Kwai Resort" class="accom-thumb">X2 River Kwai Resort</td><td>~ 5,000–12,000 บาท/คืน — รีสอร์ทริมแม่น้ำหรู</td></tr>
+                  <tr><td>กลาง</td><td><img src="../assets/images/กลาง- U Inchantree Kanchanaburi.jpg" alt="U Inchantree" class="accom-thumb">U Inchantree Kanchanaburi</td><td>~ 2,000–5,000 บาท/คืน — ทำเลสะดวก ใกล้ตัวเมือง</td></tr>
+                  <tr><td>กลาง-ประหยัด</td><td><img src="../assets/images/กลาง-ประหยัด- VN Guesthouse.jpg" alt="VN Guesthouse" class="accom-thumb">VN Guesthouse</td><td>~ 800–2,500 บาท/คืน — ราคาย่อมเยา</td></tr>
+                  <tr><td>โฮมสเตย์</td><td><img src="../assets/images/โฮมสเตย์- Good Times Resort.jpg" alt="Good Times Resort" class="accom-thumb">Good Times Resort</td><td>~ 300–1,500 บาท/คืน — บรรยากาศเรียบง่าย ใกล้ธรรมชาติ</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a href="../map.html" class="btn btn-outline-accent w-100">ดูตำแหน่งในแผนที่</a>
+          </div></div>
+          <div class="card smart-card mt-3"><div class="card-body">
+            <h5 class="card-title">ข้อมูลย่อ</h5>
+            <p class="mb-2">จังหวัด: กาญจนบุรี</p>
+            <p class="mb-2">ประเภท: น้ำตก / อุทยาน</p>
+            <p class="mb-2">เหมาะฤดู: ตลอดปี</p>
+            <a href="../recommendations.html" class="btn btn-accent w-100">ให้ระบบแนะนำทริป</a>
+          </div></div>
+        </div>
+      </div>
+    </div></main>
+    <!-- Footer -->
+    <footer class="footer py-4 mt-5"><div class="container d-flex justify-content-between align-items-center"><div>© 2025 Smart Travel</div><div><a href="../about.html" class="me-3">เกี่ยวกับ</a><a href="../map.html" class="me-3">แผนที่</a><a href="../recommendations.html">ระบบแนะนำ</a></div></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>

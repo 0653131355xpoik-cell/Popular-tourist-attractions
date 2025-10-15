@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ระบบแนะนำอัตโนมัติ — Smart Travel App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">🧭 Smart Travel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+            <li class="nav-item"><a class="nav-link" href="map.html">แผนที่ Interactive</a></li>
+            <li class="nav-item"><a class="nav-link" href="favorites.html">คลังเก็บ</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">เกี่ยวกับ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-3">
+      <button type="button" class="btn btn-outline-accent btn-sm" onclick="history.back()" aria-label="ย้อนกลับ">
+        <i class="bi bi-arrow-left" aria-hidden="true"></i> ย้อนกลับ
+      </button>
+    </div>
+
+    <section class="page-header" style="--page-cover: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1800&auto=format&fit=crop');"><div class="container">
+      <h1>ระบบแนะนำอัตโนมัติ</h1>
+      <p class="lead">เลือกความชอบของคุณ เพื่อรับคำแนะนำที่เหมาะสม</p>
+    </div></section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <form id="pref-form" class="row g-3 mt-1">
+                  <div class="col-12">
+                    <label class="form-label"><i class="bi bi-heart me-1"></i> ประเภทที่ชอบ</label>
+                    <div class="d-flex flex-wrap gap-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="mountain" id="typeMountain">
+                        <label class="form-check-label" for="typeMountain"><i class="bi bi-tree-fill me-1"></i> ภูเขา</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="sea" id="typeSea">
+                        <label class="form-check-label" for="typeSea"><i class="bi bi-water me-1"></i> ทะเล</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="waterfall" id="typeWaterfall">
+                        <label class="form-check-label" for="typeWaterfall"><i class="bi bi-droplet-fill me-1"></i> น้ำตก</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-wallet2 me-1"></i> งบประมาณ</label>
+                    <select class="form-select" id="budget">
+                      <option value="">— เลือกงบ —</option>
+                      <option value="low">ประหยัด</option>
+                      <option value="medium">กลาง</option>
+                      <option value="high">สูง</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-sun me-1"></i> ฤดูกาล</label>
+                    <select class="form-select" id="season">
+                      <option value="">— เลือกฤดูกาล —</option>
+                      <option value="summer">ฤดูร้อน</option>
+                      <option value="winter">ฤดูหนาว</option>
+                      <option value="all">ได้ทุกฤดู</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label"><i class="bi bi-compass me-1"></i> ภูมิภาค</label>
+                    <select class="form-select" id="region">
+                      <option value="">— เลือกภูมิภาค —</option>
+                      <option value="north">เหนือ</option>
+                      <option value="south">ใต้</option>
+                      <option value="west">ตะวันตก</option>
+                    </select>
+                  </div>
+                  <div class="col-12 d-flex gap-2">
+                    <button type="button" id="btnRecommend" class="btn btn-accent"><i class="bi bi-stars me-1"></i> แนะนำให้เลย</button>
+                    <button type="reset" class="btn btn-outline-accent"><i class="bi bi-arrow-counterclockwise me-1"></i> ล้างตัวเลือก</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <h2 class="section-title">ผลการแนะนำ</h2>
+            <div id="recommend-container" class="row row-cols-1 row-cols-sm-2 row-cols-lg-2 g-4 mt-1"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer py-4"><div class="container d-flex justify-content-between"><div>© 2025 Smart Travel</div><div><a href="about.html">เกี่ยวกับ</a></div></div></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+      const btn = document.getElementById('btnRecommend');
+      const container = document.getElementById('recommend-container');
+      btn.addEventListener('click', () => {
+        const types = ['typeMountain','typeSea','typeWaterfall']
+          .filter(id => document.getElementById(id).checked)
+          .map(id => document.getElementById(id).value);
+        const options = {
+          types,
+          budget: document.getElementById('budget').value || null,
+          season: document.getElementById('season').value || null,
+          region: document.getElementById('region').value || null
+        };
+        const results = recommend(options).slice(0, 6);
+        container.innerHTML = results.map(createCard).join('');
+      });
+    </script>
+  </body>
+  </html>

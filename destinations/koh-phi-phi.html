@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>เกาะพีพี — Smart Travel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>.page-header { --page-cover: url('../assets/images/Koh Phi Phi.jpg'); }</style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">🧭 Smart Travel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">หน้าแรก</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">สถานที่</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="doi-inthanon.html">ดอยอินทนนท์</a></li>
+                <li><a class="dropdown-item" href="khao-yai.html">อุทยานแห่งชาติเขาใหญ่</a></li>
+                <li><a class="dropdown-item" href="khao-sok.html">เขาสก / เขื่อนเชี่ยวหลาน</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../map.html">แผนที่ Interactive</a></li>
+            <li class="nav-item"><a class="nav-link" href="../recommendations.html">ระบบแนะนำ</a></li>
+            <li class="nav-item"><a class="nav-link" href="../about.html">เกี่ยวกับ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-3">
+      <button type="button" class="btn btn-outline-accent btn-sm" onclick="history.back()" aria-label="ย้อนกลับ"><span aria-hidden="true">←</span> ย้อนกลับ</button>
+    </div>
+
+    <!-- Header -->
+    <header class="page-header">
+      <div class="container">
+        <h1>เกาะพีพี (จังหวัดกระบี่)</h1>
+        <p class="text-secondary-soft">ทะเลอันดามัน หาดทรายสวย น้ำทะเลใส จุดดำน้ำและเกาะใกล้เคียง</p>
+        <div class="mt-3 d-flex gap-2">
+          <span class="badge">ทะเล</span>
+          <span class="badge">เกาะพีพี</span>
+          <span class="badge">อันดามัน</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <!-- Gallery -->
+            <div class="row row-cols-1 row-cols-sm-2 g-3">
+              <div class="col"><img class="w-100 rounded-4 attraction-img" src="../assets/images/Koh Phi Phi.jpg" alt="Koh Phi Phi"></div>
+              <div class="col"><img class="w-100 rounded-4 attraction-img" src="../assets/images/Koh Phi Phi - Copy.jpg" alt="Koh Phi Phi (อีกมุม)"></div>
+            </div>
+
+            <!-- General info -->
+            <section class="mt-4">
+              <h3 class="section-title">ข้อมูลทั่วไป</h3>
+              <ul>
+                <li>ตั้งอยู่ในทะเลอันดามัน จังหวัดกระบี่ มีชายหาดสวย น้ำใส</li>
+                <li>สามารถไปเที่ยวหมู่เกาะใกล้เคียงแบบเช้า–เย็นได้หลายจุด</li>
+                <li>เหมาะสำหรับกิจกรรมทางน้ำ เช่น ดำน้ำ พายคายัค</li>
+              </ul>
+            </section>
+
+            <!-- Location & Getting there -->
+            <section class="mt-4">
+              <h3 class="section-title">อยู่ที่ไหน / การเดินทาง</h3>
+              <ul>
+                <li>ที่ตั้ง: หมู่เกาะพีพี (พีพีดอน/พีพีเลย์) จังหวัดกระบี่</li>
+                <li>เรือเฟอร์รี่: จากท่าเรือกระบี่/อ่าวนาง หรือภูเก็ต → พีพี (~1.5–2 ชม.)</li>
+                <li>สปีดโบ๊ท: มีทัวร์วันเดียวจากภูเก็ต/กระบี่ ไป–กลับ เกาะรอบ ๆ</li>
+                <li>บนเกาะ: เดินเท้า/เรือหางยาวท้องถิ่นไปหาด/อ่าวต่าง ๆ</li>
+              </ul>
+            </section>
+
+            <!-- Highlights -->
+            <section class="mt-4">
+              <h3 class="section-title">สิ่งที่น่าสนใจ / ไฮไลต์ / กิจกรรม</h3>
+              <ul>
+                <li>ดำน้ำตื้น/ดำน้ำลึก ดูปะการัง</li>
+                <li>เที่ยวเกาะใกล้ เช่น เกาะไผ่ เกาะไข่ อ่าวมาหยา</li>
+                <li>พายเรือคายัค/ SUP</li>
+                <li>ชมพระอาทิตย์ขึ้น/ตกริมทะเล</li>
+                <li>เดินเล่นชายหาด/พักผ่อน</li>
+              </ul>
+            </section>
+
+            <!-- Hours & fees -->
+            <section class="mt-4">
+              <h3 class="section-title">เวลาเปิด / ค่าเข้าชม / ข้อจำกัด</h3>
+              <ul>
+                <li>ขึ้นอยู่กับตารางเรือโดยสาร/สปีดโบ๊ทของแต่ละเส้นทาง</li>
+                <li>มีค่าเรือเที่ยวเกาะ และอาจมีค่าอุทยานสำหรับบางเกาะ</li>
+                <li>บางเกาะอาจจำกัดเวลาเข้า-ออกตามความปลอดภัย</li>
+              </ul>
+            </section>
+
+            <!-- Tips -->
+            <section class="mt-4">
+              <h3 class="section-title">เคล็ดลับ / คำแนะนำ</h3>
+              <ul>
+                <li>จองที่พักและเรือไป-กลับล่วงหน้า โดยเฉพาะฤดูท่องเที่ยว</li>
+                <li>พกชุดดำน้ำตื้น/หน้ากาก/ชูชีพ</li>
+                <li>ไปเที่ยวเกาะใกล้เช้า-เย็นเพื่อหลีกเลี่ยงนักท่องเที่ยว</li>
+                <li>ตรวจเวลาคืนเรือให้ชัดเจน</li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card smart-card"><div class="card-body">
+              <h5 class="card-title">ที่พักแนะนำ (ตัวอย่าง)</h5>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead><tr><th>ระดับ</th><th>ชื่อที่พัก</th><th>ราคา/ข้อดี</th></tr></thead>
+                  <tbody>
+                    <tr><td>พรีเมียม</td><td><img src="../assets/images/พรีเมียม- Zeavola Resort.webp" alt="Zeavola Resort" class="accom-thumb">Zeavola Resort</td><td>~ 8,000–20,000 บาท/คืน — วิวทะเล วิลล่าระดับสูง</td></tr>
+                    <tr><td>กลาง</td><td><img src="../assets/images/กลาง- Phi Phi Holiday Resort.jpg" alt="Phi Phi Holiday Resort" class="accom-thumb">Phi Phi Holiday Resort</td><td>~ 3,000–7,000 บาท/คืน — ใกล้ทะเล เดินทางสะดวก</td></tr>
+                    <tr><td>กลาง-ประหยัด</td><td><img src="../assets/images/กลาง-ประหยัด- ChaoKoh Phi Phi Hotel & Resort.jpg" alt="ChaoKoh Phi Phi" class="accom-thumb">ChaoKoh Phi Phi Hotel & Resort</td><td>~ 1,000–3,000 บาท/คืน — ราคาย่อมเยา ใกล้ชายหาด</td></tr>
+                    <tr><td>โฮมสเตย์</td><td><img src="../assets/images/โฮมสเตย์- PP Insula.jpg" alt="PP Insula" class="accom-thumb">PP Insula</td><td>~ 300–1,500 บาท/คืน — ใกล้ทะเล บรรยากาศเรียบง่าย</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <a href="../map.html" class="btn btn-outline-accent w-100">ดูตำแหน่งในแผนที่</a>
+            </div></div>
+
+            <div class="card smart-card mt-3"><div class="card-body">
+              <h5 class="card-title">ข้อมูลย่อ</h5>
+              <p class="mb-2">จังหวัด: กระบี่</p>
+              <p class="mb-2">ประเภท: เกาะ / ทะเล</p>
+              <p class="mb-2">เหมาะฤดู: ตลอดปี</p>
+              <a href="../recommendations.html" class="btn btn-accent w-100">ให้ระบบแนะนำทริป</a>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer py-4"><div class="container d-flex justify-content-between"><div>© 2025 Smart Travel</div><div><a href="../about.html" class="me-3">เกี่ยวกับ</a><a href="../map.html" class="me-3">แผนที่</a><a href="../recommendations.html">ระบบแนะนำ</a></div></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

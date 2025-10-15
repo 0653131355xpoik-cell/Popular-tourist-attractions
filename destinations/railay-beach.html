@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>หาดไร่เลย์ — Smart Travel App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>.page-header { --page-cover: none; }</style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top"><div class="container"><a class="navbar-brand" href="../index.html">🧭 Smart Travel</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="../index.html">หน้าแรก</a></li><li class="nav-item"><a class="nav-link" href="../map.html">แผนที่</a></li><li class="nav-item"><a class="nav-link" href="../recommendations.html">ระบบแนะนำ</a></li></ul></div></div></nav>
+    <div class="container mt-3">
+      <button type="button" class="btn btn-outline-accent btn-sm" onclick="history.back()" aria-label="ย้อนกลับ">
+        <i class="bi bi-arrow-left me-1" aria-hidden="true"></i> ย้อนกลับ
+      </button>
+      <nav aria-label="breadcrumb" class="mt-2">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="../index.html"><i class="bi bi-house-door me-1"></i> หน้าแรก</a></li>
+          <li class="breadcrumb-item active" aria-current="page" id="crumb-current">กำลังโหลด…</li>
+        </ol>
+      </nav>
+    </div>
+    <header class="page-header"><div class="container"><h1>หาดไร่เลย์ (กระบี่)</h1><p class="text-secondary-soft">หน้าผาหินปูน — ปีนผา — ทะเลสีฟ้าใส</p></div></header>
+    <main class="py-5"><div class="container">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="row row-cols-1 row-cols-sm-2 g-3">
+            <div class="col"><img class="w-100 rounded-4" src="https://source.unsplash.com/1600x1000/?railay%20beach,longtail,krabi" alt="ชายหาด" referrerpolicy="no-referrer"></div>
+            <div class="col"><img class="w-100 rounded-4" src="https://source.unsplash.com/1600x1000/?railay%20beach,cliff,island" alt="หน้าผา" referrerpolicy="no-referrer"></div>
+          </div>
+          <section class="mt-4"><h3 class="section-title">อยู่ที่ไหน / การเดินทาง</h3><ul>
+            <li>ที่ตั้ง: หาดไร่เลย์ จังหวัดกระบี่ เข้าถึงได้เฉพาะทางเรือ</li>
+            <li>เรือหางยาว: จากอ่าวนาง/ท่าเรือกระบี่ → ไร่เลย์ตะวันออก/ตะวันตก (~10–20 นาที)</li>
+            <li>สปีดโบ๊ท/ทัวร์: มีบริการไป–กลับจากภูเก็ต/อ่าวนาง รวมกิจกรรมปีนหน้าผา</li>
+            <li>บนหาด: เดินเท้าเชื่อมระหว่างไร่เลย์ตะวันออก–ตะวันตก และหาดพระนาง</li>
+          </ul></section>
+          <section class="mt-4"><h3 class="section-title">กิจกรรม</h3><ul>
+            <li>ปีนผา/ไต่หน้าผา</li>
+            <li>ดำน้ำตื้น/พายเรือคายัค</li>
+          </ul></section>
+          <section class="mt-4"><h3 class="section-title">ช่วงที่เหมาะ</h3><ul>
+            <li>ฤดูร้อน/ฤดูหนาว</li>
+          </ul></section>
+        </div>
+        <div class="col-lg-4">
+          <div class="card smart-card"><div class="card-body"><h5 class="card-title">การเดินทาง</h5><p>เฉพาะทางเรือจากอ่าวนาง/ท่าเรือใกล้เคียง</p><a class="btn btn-outline-accent w-100" href="../map.html">ดูบนแผนที่</a></div></div>
+        </div>
+      </div>
+    </div></main>
+    <footer class="footer py-4"><div class="container d-flex justify-content-between"><div>© 2025 Smart Travel</div><div><a href="../about.html">เกี่ยวกับ</a></div></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      (function(){
+        const h1 = document.querySelector('.page-header h1');
+        const el = document.getElementById('crumb-current');
+        if (h1 && el) { el.textContent = h1.textContent.replace(/\s*\(.*\)\s*$/, ''); }
+      })();
+    </script>
+  </body>
+  </html>

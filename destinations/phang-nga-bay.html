@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>อ่าวพังงา — Smart Travel App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>.page-header { --page-cover: none; }</style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top"><div class="container"><a class="navbar-brand" href="../index.html">🧭 Smart Travel</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="../index.html">หน้าแรก</a></li><li class="nav-item"><a class="nav-link" href="../map.html">แผนที่</a></li><li class="nav-item"><a class="nav-link" href="../recommendations.html">ระบบแนะนำ</a></li></ul></div></div></nav>
+    <div class="container mt-3">
+      <button type="button" class="btn btn-outline-accent btn-sm" onclick="history.back()" aria-label="ย้อนกลับ">
+        <i class="bi bi-arrow-left me-1" aria-hidden="true"></i> ย้อนกลับ
+      </button>
+      <nav aria-label="breadcrumb" class="mt-2">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="../index.html"><i class="bi bi-house-door me-1"></i> หน้าแรก</a></li>
+          <li class="breadcrumb-item active" aria-current="page" id="crumb-current">กำลังโหลด…</li>
+        </ol>
+      </nav>
+    </div>
+    <header class="page-header"><div class="container"><h1>อุทยานแห่งชาติอ่าวพังงา (พังงา)</h1><p class="text-secondary-soft">หมู่เกาะหินปูน — เขาตะปู/เขาพิงกัน ล่องเรือคายัค</p></div></header>
+    <main class="py-5"><div class="container">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="row row-cols-1 row-cols-sm-2 g-3">
+            <div class="col"><img class="w-100 rounded-4" src="https://source.unsplash.com/1600x1000/?phang%20nga%20bay,karst,island" alt="อ่าวพังงา" referrerpolicy="no-referrer"></div>
+            <div class="col"><img class="w-100 rounded-4" src="https://source.unsplash.com/1600x1000/?khao%20phing%20kan,ko%20tapu,phang%20nga" alt="เขาตะปู" referrerpolicy="no-referrer"></div>
+          </div>
+          <section class="mt-4"><h3 class="section-title">อยู่ที่ไหน / การเดินทาง</h3><ul>
+            <li>ที่ตั้ง: อุทยานแห่งชาติอ่าวพังงา จังหวัดพังงา</li>
+            <li>ท่าเรือ: ท่าเรืออำเภอพังงา/อ่าวพังงา มีเรือหางยาว/สปีดโบ๊ทบริการ</li>
+            <li>ทัวร์: ออกได้จากภูเก็ต/พังงา/อ่าวนาง (ครึ่งวัน–เต็มวัน) รวมรถรับ–ส่งถึงท่าเรือ</li>
+            <li>เวลาล่องเรือ: เช้า–บ่าย ขึ้นกับสภาพคลื่น/น้ำขึ้นลง</li>
+          </ul></section>
+          <section class="mt-4"><h3 class="section-title">กิจกรรม</h3><ul>
+            <li>ล่องเรือชมหน้าผาหินปูน</li>
+            <li>คายัคสำรวจถ้ำ/ลากูน</li>
+            <li>ถ่ายภาพแลนด์สเคปทะเลใต้</li>
+          </ul></section>
+          <section class="mt-4"><h3 class="section-title">ช่วงที่เหมาะ</h3><ul>
+            <li>ฤดูร้อน/ฤดูหนาว — ทะเลนิ่ง ทัศนวิสัยดี</li>
+          </ul></section>
+        </div>
+        <div class="col-lg-4">
+          <div class="card smart-card"><div class="card-body"><h5 class="card-title">งบประมาณ</h5><p>ทริปล่องเรือครึ่งวัน–เต็มวัน (งบกลาง)</p><a class="btn btn-outline-accent w-100" href="../map.html">ดูบนแผนที่</a></div></div>
+          <div class="card smart-card mt-3"><div class="card-body"><h5 class="card-title">ที่พักใกล้เคียง</h5><p>ตัวเมืองพังงา/ภูเก็ต/อ่าวนาง</p></div></div>
+        </div>
+      </div>
+    </div></main>
+    <footer class="footer py-4"><div class="container d-flex justify-content-between"><div>© 2025 Smart Travel</div><div><a href="../about.html">เกี่ยวกับ</a></div></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      (function(){
+        const h1 = document.querySelector('.page-header h1');
+        const el = document.getElementById('crumb-current');
+        if (h1 && el) { el.textContent = h1.textContent.replace(/\s*\(.*\)\s*$/, ''); }
+      })();
+    </script>
+  </body>
+  </html>

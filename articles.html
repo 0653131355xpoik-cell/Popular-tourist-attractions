@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Travel — บทความและคู่มือ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">🧭 Smart Travel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+            <li class="nav-item"><a class="nav-link" href="map.html">แผนที่ Interactive</a></li>
+            <li class="nav-item"><a class="nav-link" href="recommendations.html">ระบบแนะนำ</a></li>
+            <li class="nav-item"><a class="nav-link" href="favorites.html">คลังเก็บ</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">เกี่ยวกับ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-3">
+      <button type="button" class="btn btn-outline-accent btn-sm" onclick="history.back()" aria-label="ย้อนกลับ"><span aria-hidden="true">←</span> ย้อนกลับ</button>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header" style="--page-cover: url('https://images.unsplash.com/photo-1502920917128-1aa500764ce7?q=80&w=1800&auto=format&fit=crop');">
+      <div class="container">
+        <h1>บทความและคู่มือ</h1>
+        <p class="lead">รวมวิธีใช้งาน ระบบแนะนำ แผนที่ และทริปยอดนิยม</p>
+      </div>
+    </section>
+
+    <main class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <h2 class="section-title m-0">รายการบทความ</h2>
+            </div>
+            <div class="list-group">
+              <a href="recommendations.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-stars me-3 text-warning"></i>
+                <div>
+                  <div class="fw-bold">เริ่มต้นใช้ระบบแนะนำอัตโนมัติ</div>
+                  <small class="text-secondary-soft">เลือกประเภท งบ ฤดูกาล และภูมิภาค เพื่อรับคำแนะนำ</small>
+                </div>
+              </a>
+              <a href="map.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-map me-3 text-primary"></i>
+                <div>
+                  <div class="fw-bold">สำรวจแผนที่ Interactive</div>
+                  <small class="text-secondary-soft">ดูพิกัดเส้นทางและไฮไลต์ของแต่ละจุดหมาย</small>
+                </div>
+              </a>
+              <a href="favorites.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-heart me-3 text-danger"></i>
+                <div>
+                  <div class="fw-bold">จัดการคอลเลกชันที่คุณชอบ (Favorites)</div>
+                  <small class="text-secondary-soft">เพิ่ม/ลบ รายการที่ชอบ และดูทั้งหมดในหน้าคลังเก็บ</small>
+                </div>
+              </a>
+              <a href="index.html#cards" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="bi bi-grid me-3 text-teal"></i>
+                <div>
+                  <div class="fw-bold">ทำความรู้จัก Dynamic Cards</div>
+                  <small class="text-secondary-soft">เลื่อนดูรายการ ยกการ์ดเมื่อโฮเวอร์ และเปิดรายละเอียด</small>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card smart-card">
+              <div class="card-body">
+                <h5 class="card-title">ทริปแนะนำ</h5>
+                <p class="text-secondary-soft">เริ่มจาก 10 จุดหมายยอดนิยมของเรา</p>
+                <a href="index.html" class="btn btn-outline-accent w-100">กลับไปหน้าแรก</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer py-4 mt-5">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div>© 2025 Smart Travel</div>
+        <div>
+          <a href="about.html" class="me-3">เกี่ยวกับ</a>
+          <a href="map.html" class="me-3">แผนที่</a>
+          <a href="recommendations.html">ระบบแนะนำ</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

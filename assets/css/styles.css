@@ -1,0 +1,174 @@
+/* ----------------------------------------------------
+   Smart Travel App — New Unified UI Theme
+   เป้าหมาย: ปรับโทนสี/ฟอนต์/ลูกเล่นให้ทันสมัย
+   และรวมความรู้สึกจากหน้า Preview ที่ให้มา (Marketplace)
+
+   หมายเหตุ: ใส่คำอธิบายการทำงานของโค้ดไว้ในไฟล์นี้ด้วย
+   เพื่อให้อ่านง่ายและดูแลรักษาในอนาคต
+----------------------------------------------------- */
+
+/* โหลดฟอนต์ใหม่แบบ Global ผ่าน CSS เพื่อให้ทุกหน้าใช้งานได้ทันที */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+/* ตัวแปรธีมหลัก — เลือกโทนใกล้เคียง Product Marketplace: น้ำเงิน-คราม + ทีล + ทอง */
+:root {
+  --primary: #1e3a8a; /* Indigo 800 — สีหลักสำหรับ Navbar/Hero */
+  --secondary: #7c96b2; /* ฟ้าเทานุ่ม สำหรับตัวอักษรเสริม */
+  --accent: #14b8a6; /* Teal 500 — สีเน้นปุ่ม/ชิป */
+  --highlight: #f59e0b; /* Amber 500 — ใช้กับตัวเลข/เคาน์เตอร์ */
+  --white: #ffffff;
+  --text: #1f2937; /* Gray 800 — ตัวอักษรหลัก */
+  --surface: #f8fafc; /* พื้นหลังอ่อน */
+}
+
+/* ตั้งค่าพื้นฐานเอกสาร */
+html, body { height: 100%; }
+
+body {
+  /* ใช้ Inter เป็นตัวหนังสือหลัก และ Poppins กับหัวข้อ ให้ฟีลโมเดิร์น */
+  font-family: 'Inter', 'Poppins', 'Kanit', 'Roboto', system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--surface) 0%, #ffffff 100%);
+}
+
+.navbar { background-color: var(--primary) !important; }
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.nav-link, .navbar-brand {
+  color: #e8f1f8 !important; /* ข้อความใน Navbar เป็นอ่อน เพื่อคอนทราสต์ดี */
+}
+.nav-link:hover {
+  color: var(--accent) !important; /* โฮเวอร์เป็นสีทีลให้รู้สึก Interactive */
+}
+
+/* ปุ่มหลัก: ทีล */
+.btn-accent { background-color: var(--accent); color: #fff; border: none; }
+.btn-accent:hover { filter: brightness(0.92); color: #fff; }
+
+/* ปุ่มกรอบ: เน้นทีล */
+.btn-outline-accent { border-color: var(--accent); color: var(--accent); }
+.btn-outline-accent:hover { background-color: var(--accent); color: #fff; }
+
+/* ฮีโร่ใหม่: อินดิโก้ไล่เฉด + เลเยอร์พร่ามัว ให้ฟีลโปรดักต์สมัยใหม่ */
+.hero {
+  background:
+    radial-gradient(1000px 300px at 85% -120%, rgba(30,58,138,.35) 0, transparent 60%),
+    radial-gradient(1000px 300px at 15% -150%, rgba(245,158,11,.22) 0, transparent 60%),
+    linear-gradient(135deg, #1e3a8a 0%, #172554 50%, #0f172a 100%);
+  color: #e8f1f8;
+  padding: 72px 0;
+}
+.hero h1 {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(34px, 5.2vw, 56px);
+}
+.hero p.lead {
+  color: #caddf0; /* คำโปรยอ่อนลงเล็กน้อยเพื่อบาลานซ์ภาพรวม */
+}
+
+.section-title { font-weight: 700; color: var(--primary); }
+
+/* การ์ด: ยกนิด ๆ + เงาแบบนุ่ม ให้ความรู้สึกแพงขึ้น */
+.card.smart-card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(30, 58, 138, .12);
+  transition: transform .2s ease, box-shadow .2s ease;
+  overflow: hidden;
+}
+.card.smart-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(30, 58, 138, .18); }
+.card.smart-card .badge {
+  background-color: rgba(30, 58, 138, .08);
+  color: var(--primary);
+}
+.card.smart-card .price-badge {
+  background-color: rgba(245, 158, 11, .12);
+  color: #a16207;
+}
+
+.page-header {
+  /* ส่วนหัวหน้ารายละเอียดสถานที่ ใช้ภาพปกซ้อนเลเยอร์เข้มเพื่อให้อ่านง่าย */
+  background: linear-gradient(135deg, rgba(30,58,138,.85), rgba(23,37,84,.85)),
+              var(--page-cover, url('https://images.unsplash.com/photo-1491557345350-24e69e80c07a?q=80&w=1800&auto=format&fit=crop'));
+  background-size: cover;
+  background-position: center;
+  color: #e8f1f8;
+  padding: 72px 0;
+}
+.page-header h1 {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+/* ไอคอนคุณสมบัติบนหน้าแรก */
+.feature-icon {
+  width: 44px; height: 44px; border-radius: 10px; display: inline-flex;
+  align-items: center; justify-content: center;
+  background: rgba(30,58,138,.06); color: var(--primary);
+  border: 1px solid rgba(30,58,138,.18);
+}
+
+/* เพิ่มคอนทราสต์ข้อความในบล็อกฟีเจอร์ของฮีโร่ */
+.hero .text-secondary-soft { color: #4a5d78; }
+.hero .fw-bold { color: #1e3a8a; }
+
+.footer { background: #0f172a; color: #caddf0; }
+.footer a { color: #caddf0; }
+.footer a:hover { color: var(--accent); }
+
+/* กล่องแผนที่ให้มีเงานุ่มและมุมโค้ง */
+#map { height: 560px; border-radius: 16px; box-shadow: 0 8px 28px rgba(30, 58, 138, .12); }
+
+/* ชิปกรอง: สไตล์ใหม่ สีเส้นอ่อน + โฮเวอร์สะกิด */
+.filter-chip { border: 1px solid rgba(30,58,138,.22); color: var(--primary); }
+.filter-chip:hover { border-color: var(--accent); color: var(--accent); }
+.filter-chip.active { background-color: var(--accent); border-color: var(--accent); color: white; }
+
+.table thead { background: rgba(30,58,138,.06); }
+
+/* Utility */
+.text-secondary-soft { color: var(--secondary); }
+/* เมตริก/เคาน์เตอร์บนหน้าแรก */
+.metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.metrics .metric {
+  background: #fff;
+  border: 1px solid rgba(30,58,138,.08);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 18px rgba(30,58,138,.08);
+}
+.metric .value { font-family: 'Poppins', 'Inter', sans-serif; font-size: 28px; font-weight: 700; color: var(--highlight); }
+.metric .label { color: var(--secondary); text-decoration: none; }
+.metric .label:hover { color: var(--accent); }
+
+/* Like button styling: compact and consistent */
+.like-btn {
+  min-width: 110px;
+  font-weight: 500;
+}
+
+/* Unified media sizing */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.gallery-grid img,
+.attraction-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Card cover images on index/recommendations */
+/* ปรับสัดส่วนภาพหน้าปกของการ์ดให้คงที่ */
+.card-img-top { aspect-ratio: 4 / 3; object-fit: cover; }
+
+/* Accommodation thumbnails inside tables */
+.accom-thumb {
+  width: 60px; height: 60px; object-fit: cover; border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(30,58,138,.12); margin-right: 8px;
+}
+.table td { vertical-align: middle; }
+
+/* จุดเล็ก ๆ: เพิ่มทรานสิชันทั่วไปให้ฟีลที่นิ่งขึ้น */
+* { transition: color .12s ease, background-color .12s ease, border-color .12s ease; }

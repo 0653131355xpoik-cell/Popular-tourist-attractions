@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>เกาะสมุย — Smart Travel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>
+      .page-header { --page-cover: url('../assets/images/เกาะสมุย2.jpg'); }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">🧭 Smart Travel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">หน้าแรก</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="destinationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">สถานที่</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="doi-inthanon.html">ดอยอินทนนท์</a></li>
+                <li><a class="dropdown-item" href="khao-yai.html">อุทยานแห่งชาติเขาใหญ่</a></li>
+                <li><a class="dropdown-item" href="khao-sok.html">เขาสก / เขื่อนเชี่ยวหลาน</a></li>
+                <li><a class="dropdown-item" href="ayutthaya-historic-park.html">เมืองเก่าอยุธยา</a></li>
+                <li><a class="dropdown-item" href="koh-samui.html">เกาะสมุย</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../map.html">แผนที่ Interactive</a></li>
+            <li class="nav-item"><a class="nav-link" href="../recommendations.html">ระบบแนะนำ</a></li>
+            <li class="nav-item"><a class="nav-link" href="../about.html">เกี่ยวกับ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-3">
+      <button type="button" class="btn btn-outline-accent btn-sm" onclick="history.back()" aria-label="ย้อนกลับ"><span aria-hidden="true">←</span> ย้อนกลับ</button>
+    </div>
+
+    <!-- Header -->
+    <header class="page-header">
+      <div class="container">
+        <h1>เกาะสมุย (จังหวัดสุราษฎร์ธานี)</h1>
+        <p class="text-secondary-soft">เกาะยอดนิยมฝั่งอ่าวไทย — ชายหาดสวย รีสอร์ทบรรยากาศดี กิจกรรมทางน้ำ</p>
+        <div class="mt-3 d-flex gap-2">
+          <span class="badge">เกาะ</span>
+          <span class="badge">อ่าวไทย</span>
+          <span class="badge">ชายหาด</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <!-- Gallery -->
+            <div class="row row-cols-1 row-cols-sm-2 g-3">
+              <div class="col"><img class="w-100 rounded-4 attraction-img" src="../assets/images/เกาะสมุย1.jpeg" alt="เกาะสมุย"></div>
+              <div class="col"><img class="w-100 rounded-4 attraction-img" src="../assets/images/เกาะสมุย2.jpg" alt="ชายหาดเกาะสมุย"></div>
+            </div>
+
+            <!-- General info -->
+            <section class="mt-4">
+              <h3 class="section-title">ข้อมูลทั่วไป</h3>
+              <ul>
+                <li>เกาะในทะเลภาคใต้ ฝั่งอ่าวไทย</li>
+                <li>มีชายหาดชื่อดัง วิวทะเล บรรยากาศรีสอร์ท</li>
+                <li>อยู่ในรายชื่อ “10 Must-Visit Destinations in Thailand” (Bucketlist Bums | World Traveler Blog)</li>
+              </ul>
+            </section>
+
+            <!-- Location & Getting there -->
+            <section class="mt-4">
+              <h3 class="section-title">อยู่ที่ไหน / การเดินทาง</h3>
+              <ul>
+                <li>ที่ตั้ง: อ่าวไทย จังหวัดสุราษฎร์ธานี ห่างฝั่งบริเวณอำเภอดอนสัก ~35 กม.</li>
+                <li>เครื่องบิน: สนามบินสมุย (USM) มีเที่ยวบินจากกรุงเทพฯ/ภูเก็ต/เชียงใหม่</li>
+                <li>เรือเฟอร์รี่: ดอนสัก ↔ สมุย (ท่าเรือหน้าทอน/ลิปะน้อย) โดย Seatran / Lomprayah ~1–1.5 ชม.</li>
+                <li>ทางบก+เรือ: รถไฟ/รถบัส → สุราษฎร์ธานี → รถต่อไปท่าเรือดอนสัก → เฟอร์รี่</li>
+              </ul>
+            </section>
+
+            <!-- Highlights -->
+            <section class="mt-4">
+              <h3 class="section-title">สิ่งที่น่าสนใจ / ไฮไลต์ / กิจกรรม</h3>
+              <ul>
+                <li>พักผ่อนชายหาด / เดินริมหาด</li>
+                <li>เที่ยวเกาะเล็กใกล้เคียง / ดำน้ำตื้น</li>
+                <li>เยี่ยมวัดดังบนเกาะ เช่น วัดพระใหญ่</li>
+                <li>ชมพระอาทิตย์ขึ้น/ตก / นั่งเรือชมอ่าว</li>
+                <li>ช้อปปิ้ง / ดื่ม / ชิลริมหาด</li>
+              </ul>
+            </section>
+
+            <!-- Hours & fees -->
+            <section class="mt-4">
+              <h3 class="section-title">เวลาเปิด/ค่าเข้าชม/ข้อจำกัด</h3>
+              <ul>
+                <li>ชายหาดส่วนใหญ่เปิดตลอดวัน</li>
+                <li>บางกิจกรรมมีเวลาให้บริการ (เช่น ทัวร์เกาะ / เรือ)</li>
+              </ul>
+            </section>
+
+            <!-- Tips -->
+            <section class="mt-4">
+              <h3 class="section-title">เคล็ดลับ / คำแนะนำ</h3>
+              <ul>
+                <li>จองที่พัก + ตั๋วเรือ/เครื่องบินล่วงหน้า</li>
+                <li>พกชุดว่ายน้ำ / อุปกรณ์ดำน้ำ</li>
+                <li>สำรวจเกาะใกล้ ไปเช้า–เย็นกลับ</li>
+                <li>ตรวจสภาพอากาศ / คลื่น / ฝน ก่อนออกทริป</li>
+              </ul>
+            </section>
+          </div>
+
+          <div class="col-lg-4">
+            <!-- Stay recommendations -->
+            <div class="card smart-card">
+              <div class="card-body">
+                <h5 class="card-title">ที่พักแนะนำ (ตัวอย่าง)</h5>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>ระดับ</th>
+                        <th>ชื่อที่พัก</th>
+                        <th>ราคา/ข้อดี</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>พรีเมียม</td>
+                        <td><img class="accom-thumb" src="../assets/images/โฟร์ ซีซันส์ รีสอร์ท เกาะสมุย.jpg" alt="Four Seasons Koh Samui">Four Seasons Koh Samui</td>
+                        <td>~ 8,000–25,000 บาท/คืน — วิวทะเล บริการหรู</td>
+                      </tr>
+                      <tr>
+                        <td>กลาง</td>
+                        <td><img class="accom-thumb" src="../assets/images/อนันตรา ลาวานา เกาะสมุย รีสอร์ท.jfif" alt="Anantara Lawana Samui">Anantara Lawana Koh Samui Resort</td>
+                        <td>~ 3,000–8,000 บาท/คืน — ใกล้หาด เดินทางสะดวก</td>
+                      </tr>
+                      <tr>
+                        <td>กลาง-ประหยัด</td>
+                        <td><img class="accom-thumb" src="../assets/images/รีสอร์ทริมชายหาด.jpg" alt="Beachside Resort">รีสอร์ทริมหาด</td>
+                        <td>~ 1,000–3,500 บาท/คืน — ราคาย่อมเยา ใกล้ชายหาด</td>
+                      </tr>
+                      <tr>
+                        <td>โฮมสเตย์ / บังกะโลเล็ก</td>
+                        <td><img class="accom-thumb" src="../assets/images/แหลมบีช.webp" alt="Bungalow Samui">บังกะโลริมหาด</td>
+                        <td>~ 300–1,500 บาท/คืน — ใกล้ทะเล บรรยากาศธรรมชาติ</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <a href="../map.html" class="btn btn-outline-accent w-100">ดูตำแหน่งในแผนที่</a>
+              </div>
+            </div>
+
+            <!-- Quick facts -->
+            <div class="card smart-card mt-3">
+              <div class="card-body">
+                <h5 class="card-title">ข้อมูลย่อ</h5>
+                <p class="mb-2">จังหวัด: สุราษฎร์ธานี</p>
+                <p class="mb-2">ประเภท: เกาะ / ชายหาด / รีสอร์ท</p>
+                <p class="mb-2">เหมาะฤดู: ตลอดปี (ฤดูแล้งทะเลสวย)</p>
+                <a href="../recommendations.html" class="btn btn-accent w-100">ให้ระบบแนะนำทริป</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4 mt-5">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div>© 2025 Smart Travel</div>
+        <div>
+          <a href="../about.html" class="me-3">เกี่ยวกับ</a>
+          <a href="../map.html" class="me-3">แผนที่</a>
+          <a href="../recommendations.html">ระบบแนะนำ</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>

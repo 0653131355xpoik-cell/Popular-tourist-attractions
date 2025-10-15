@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Travel App — หน้าแรก</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="theme-color" content="#0b3c5d">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">🧭 Smart Travel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="destinationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">สถานที่</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="destinations/doi-inthanon.html">ดอยอินทนนท์</a></li>
+                <li><a class="dropdown-item" href="destinations/khao-yai.html">อุทยานแห่งชาติเขาใหญ่</a></li>
+                <li><a class="dropdown-item" href="destinations/khao-sok.html">อุทยานแห่งชาติเขาสก / เขื่อนเชี่ยวหลาน</a></li>
+                <li><a class="dropdown-item" href="destinations/koh-phi-phi.html">เกาะพีพี</a></li>
+                <li><a class="dropdown-item" href="destinations/khao-sam-roi-yot.html">อุทยานแห่งชาติเขาสามร้อยยอด</a></li>
+                <li><a class="dropdown-item" href="destinations/erawan-waterfall.html">น้ำตกเอราวัณ</a></li>
+                <li><a class="dropdown-item" href="destinations/ayutthaya-historic-park.html">เมืองเก่าอยุธยา</a></li>
+                <li><a class="dropdown-item" href="destinations/koh-samui.html">เกาะสมุย</a></li>
+                <li><a class="dropdown-item" href="destinations/hat-chao-mai.html">อุทยานแห่งชาติหาดเจ้าไหม / เกาะลังกาจิว</a></li>
+                <li><a class="dropdown-item" href="destinations/khao-luang.html">เขาหลวง (สุราษฎร์ธานี)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="map.html">แผนที่ Interactive</a></li>
+            <li class="nav-item"><a class="nav-link" href="recommendations.html">ระบบแนะนำ</a></li>
+            <li class="nav-item"><a class="nav-link" href="favorites.html">คลังเก็บ</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">เกี่ยวกับ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero (ปรับโฉมใหม่ให้ฟีล Product Marketplace) -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- ด้านข้อความ/CTA -->
+          <div class="col-lg-7">
+            <!-- หัวข้อหลัก: ใช้ฟอนต์ Poppins จากธีมใหม่ -->
+            <h1>ค้นหาทริปในฝันของคุณ — Smart Travel</h1>
+            <p class="lead mt-3">ดีไซน์ใหม่สไตล์โปรดักต์ โทน Indigo/Teal/Amber พร้อมลูกเล่นเคาน์เตอร์และการ์ดที่ทันสมัย</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="map.html" class="btn btn-outline-accent btn-lg">ดูแผนที่ Interactive</a>
+              <a href="recommendations.html" class="btn btn-outline-accent btn-lg">ระบบแนะนำอัตโนมัติ</a>
+            </div>
+            <!-- เมตริก/เคาน์เตอร์แบบ Product Stats -->
+            <div class="metrics mt-4">
+              <!-- เคาน์เตอร์แต่ละอันมี data-target สำหรับอนิเมตตัวเลขด้วย JS -->
+              <div class="metric">
+                <div class="value" data-target="10">0</div>
+                <div class="label">จุดหมายยอดนิยม</div>
+              </div>
+              <div class="metric">
+                <div class="value" data-target="100">0%</div>
+                <div class="label">ความพึงพอใจ</div>
+              </div>
+              <div class="metric">
+                <div class="value" data-target="1">0</div>
+                <div class="label">ผู้ใช้งาน/นักเดินทาง</div>
+              </div>
+              <div class="metric">
+                <div class="value" data-target="0">0</div>
+                <a class="label" href="articles.html">คู่มือ/บทความ</a>
+              </div>
+            </div>
+          </div>
+          <!-- ด้านไฮไลต์คุณสมบัติ -->
+          <div class="col-lg-5 mt-4 mt-lg-0">
+            <div class="p-3 bg-white rounded-4 shadow-sm">
+              <div class="d-flex align-items-center gap-3">
+                <div class="feature-icon"><i class="bi bi-map"></i></div>
+                <div>
+                  <div class="fw-bold">แผนที่แบบ Interactive</div>
+                  <div class="text-secondary-soft">ดูตำแหน่งสถานที่ ไฮไลต์ และเส้นทาง</div>
+                </div>
+              </div>
+              <hr>
+              <div class="d-flex align-items-center gap-3">
+                <div class="feature-icon"><i class="bi bi-stars"></i></div>
+                <div>
+                  <div class="fw-bold">ระบบแนะนำอัตโนมัติ</div>
+                  <div class="text-secondary-soft">เลือกสไตล์/งบ/ฤดูกาล เพื่อรับคำแนะนำ</div>
+                </div>
+              </div>
+              <hr>
+              <div class="d-flex align-items-center gap-3">
+                <div class="feature-icon"><i class="bi bi-grid"></i></div>
+                <div>
+                  <div class="fw-bold">Dynamic Cards</div>
+                  <div class="text-secondary-soft">เลื่อน/โฟกัส/ดูรายละเอียดได้อย่างลื่นไหล</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="py-4">
+      <div class="container">
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn filter-chip active" data-filter-type="all">ทั้งหมด</button>
+          <button class="btn filter-chip" data-filter-type="mountain">ภูเขา</button>
+          <button class="btn filter-chip" data-filter-type="sea">ทะเล</button>
+          <button class="btn filter-chip" data-filter-type="waterfall">น้ำตก</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Cards -->
+    <section class="py-5">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h2 class="section-title m-0">จุดหมายยอดนิยม</h2>
+          <a href="recommendations.html" class="btn btn-outline-accent">ให้แนะนำให้หน่อย</a>
+        </div>
+        <div id="cards-container" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 mt-5">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div>© 2025 Smart Travel — โทน: น้ำเงินเข้ม/ฟ้าเทา/ส้ม/ขาว</div>
+        <div>
+          <a href="about.html" class="me-3">เกี่ยวกับ</a>
+          <a href="map.html" class="me-3">แผนที่</a>
+          <a href="recommendations.html">ระบบแนะนำ</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <!-- เคาน์เตอร์: สคริปต์อนิเมตเลขเมื่อเลื่อนถึงฮีโร่ -->
+    <script>
+      // อธิบาย: ใช้ IntersectionObserver ติดตามเมื่อส่วน .metrics เข้าสู่ viewport
+      // จากนั้นจะอ่านค่า data-target และค่อย ๆ เพิ่มตัวเลขใน .value
+      (function() {
+        const metrics = document.querySelector('.metrics');
+        if (!metrics) return;
+        const animate = (el) => {
+          // อ่านเป้าหมายจาก data-target, ตรวจว่าเป็นเปอร์เซ็นต์หรือมีสัญลักษณ์ +
+          const targetAttr = el.getAttribute('data-target');
+          const isPercent = el.textContent.includes('%');
+          const isPlus = el.textContent.includes('+');
+          const target = parseInt(targetAttr, 10) || 0;
+          let current = 0;
+          const step = Math.max(1, Math.floor(target / 50));
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(timer); }
+            el.textContent = isPercent ? current + '%' : (isPlus ? current + '+' : current);
+          }, 16);
+        };
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              metrics.querySelectorAll('.value').forEach(animate);
+              io.disconnect(); // ทำครั้งเดียวพอ
+            }
+          });
+        }, { threshold: 0.25 });
+        io.observe(metrics);
+      })();
+    </script>
+  </body>
+  </html>
