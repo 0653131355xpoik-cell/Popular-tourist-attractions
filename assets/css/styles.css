@@ -43,11 +43,14 @@ body {
   color: var(--accent) !important; /* โฮเวอร์เป็นสีทีลให้รู้สึก Interactive */
 }
 
-/* ปุ่มหลัก: ทีล */
+/* ปุ่มหลัก: ทีล
+   หมายเหตุ: ปุ่มถูกใจ (Like) จะสลับคลาสระหว่าง .btn-accent และ
+   .btn-outline-accent ผ่าน JavaScript (assets/js/app.js) เพื่อแสดงสถานะ
+   active/ไม่ active อย่างชัดเจนเมื่อผู้ใช้คลิก */
 .btn-accent { background-color: var(--accent); color: #fff; border: none; }
 .btn-accent:hover { filter: brightness(0.92); color: #fff; }
 
-/* ปุ่มกรอบ: เน้นทีล */
+/* ปุ่มกรอบ: เน้นทีล — ใช้สำหรับสถานะเริ่มต้น/ไม่ active ของปุ่มถูกใจ */
 .btn-outline-accent { border-color: var(--accent); color: var(--accent); }
 .btn-outline-accent:hover { background-color: var(--accent); color: #fff; }
 

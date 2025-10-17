@@ -1,3 +1,12 @@
+/* -----------------------------------------------------------
+   Smart Travel App — JavaScript Overview
+   โค้ดนี้รับผิดชอบ:
+   - ข้อมูลสถานที่ (attractions) และตัวช่วยดึงข้อมูล
+   - ระบบ Favorites ด้วย localStorage (เพิ่ม/ลบ/ตรวจสอบ)
+   - สร้าง HTML การ์ดและเรนเดอร์รายการการ์ดตามตัวกรอง
+   - อัลกอริทึมแนะนำสถานที่ (recommend) แบบถ่วงน้ำหนัก
+   - ผูก Event กับ UI (ฟิลเตอร์, ปุ่มถูกใจ) เมื่อ DOM พร้อมใช้งาน
+------------------------------------------------------------ */
 // Smart Travel App - data + helpers
 const attractions = [
   // 1) ดอยอินทนนท์ (จังหวัดเชียงใหม่)
@@ -199,7 +208,13 @@ attractions.push(...moreAttractions);
 
 function getAttractions() { return attractions; }
 
+/**
+ * หมายเหตุ: getAttractions()
+ * คืนค่ารายการสถานที่ทั้งหมดที่ถูก merge เข้าด้วยกัน เพื่อใช้เรนเดอร์
+ */
+
 // Favorites (คลังเก็บ) — ใช้ localStorage เก็บรายการที่ถูกใจ
+// โครงสร้างที่เก็บ: Array ของ id สถานที่ เช่น ['doi-inthanon','khao-yai']
 const FAVORITES_KEY = 'smart_travel_favorites';
 function getFavorites() {
   try {
@@ -207,13 +222,30 @@ function getFavorites() {
     return raw ? JSON.parse(raw) : [];
   } catch (e) { return []; }
 }
+/**
+ * saveFavorites(ids: string[])
+ * บันทึกรายการ id ที่ถูกใจลง localStorage เป็น JSON
+ */
 function saveFavorites(ids) { localStorage.setItem(FAVORITES_KEY, JSON.stringify(ids)); }
+/**
+ * isFavorite(id: string): boolean
+ * ตรวจสอบว่า id นี้อยู่ในรายการ Favorites หรือไม่
+ */
 function isFavorite(id) { return getFavorites().includes(id); }
+/**
+ * toggleFavorite(id: string)
+ * สลับสถานะถูกใจ: ถ้ามีอยู่แล้วจะลบออก ไม่มีก็เพิ่มเข้าไป
+ */
 function toggleFavorite(id) {
   const set = new Set(getFavorites());
   if (set.has(id)) set.delete(id); else set.add(id);
   saveFavorites(Array.from(set));
 }
+/**
+ * renderFavoriteCards(containerId: string)
+ * เรนเดอร์การ์ดเฉพาะรายการที่ถูกใจลงใน container ที่ระบุ
+ * ถ้ายังไม่มีรายการถูกใจ จะแสดงข้อความว่าง (empty state)
+ */
 function renderFavoriteCards(containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -226,6 +258,12 @@ function renderFavoriteCards(containerId) {
   container.innerHTML = list.map(createCard).join('');
 }
 
+/**
+ * createCard(a: Attraction): string (HTML)
+ * คืนค่า HTML ของการ์ดสถานที่ 1 ใบ
+ * หมายเหตุ: ปุ่ม "ถูกใจ" จะตั้งค่าให้ตรงกับสถานะ Favorites ปัจจุบัน
+ * โดยใช้คลาส .btn-accent (active) หรือ .btn-outline-accent (inactive)
+ */
 function createCard(a) {
   return `
   <div class="col">
@@ -241,13 +279,18 @@ function createCard(a) {
         <p class="card-text text-secondary-soft">${a.highlights.slice(0,3).join(' • ')}</p>
         <div class="d-flex gap-2 mt-2">
           <a class="btn btn-accent flex-grow-1" href="${a.url}">ดูรายละเอียด</a>
-          <button class="btn btn-outline-accent like-btn" data-id="${a.id}" aria-pressed="${isFavorite(a.id)}">${isFavorite(a.id) ? '♥ ถูกใจแล้ว' : '♡ ถูกใจ'}</button>
+          <button class="btn ${isFavorite(a.id) ? 'btn-accent' : 'btn-outline-accent'} like-btn" data-id="${a.id}" aria-pressed="${isFavorite(a.id)}">${isFavorite(a.id) ? '♥ ถูกใจแล้ว' : '♡ ถูกใจ'}</button>
         </div>
       </div>
     </div>
   </div>`;
 }
 
+/**
+ * renderCards(containerId: string, filter: { type?: string })
+ * เรนเดอร์การ์ดทั้งหมดตามตัวกรองชนิดสถานที่ (type)
+ * - filter.type: 'mountain' | 'sea' | 'waterfall' | 'culture' | 'all'
+ */
 function renderCards(containerId, filter = {}) {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -255,6 +298,13 @@ function renderCards(containerId, filter = {}) {
   container.innerHTML = list.map(createCard).join('');
 }
 
+/**
+ * recommend(options): Attraction[]
+ * สร้างรายการแนะนำโดย:
+ * 1) กรองแบบตรงเงื่อนไขทั้งหมด (exact match) ก่อน
+ * 2) ถ้าไม่พบ จะผ่อนเงื่อนไขทีละส่วน (type > region > season)
+ * 3) คำนวณคะแนนด้วยน้ำหนักแบบง่ายเพื่อจัดอันดับผลลัพธ์
+ */
 function recommend(options) {
   // Improved recommendation: strict filtering first, then graceful fallback
   // - Treat selected preferences as constraints
@@ -315,6 +365,11 @@ function recommend(options) {
 }
 
 // Page bootstrap
+/**
+ * DOMContentLoaded
+ * - ผูกคลิกชิปฟิลเตอร์บนหน้าแรกให้เรนเดอร์การ์ดใหม่
+ * - ใช้ event delegation จัดการคลิกปุ่มถูกใจให้ทำงานทุกหน้า
+ */
 document.addEventListener('DOMContentLoaded', () => {
   // Index filters
   const chips = document.querySelectorAll('[data-filter-type]');
@@ -338,6 +393,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const active = isFavorite(id);
     btn.setAttribute('aria-pressed', active);
     btn.textContent = active ? '♥ ถูกใจแล้ว' : '♡ ถูกใจ';
+    btn.classList.toggle('btn-accent', active);
+    btn.classList.toggle('btn-outline-accent', !active);
     // ถ้าอยู่ในหน้า favorites ให้รีเฟรชรายการ
     if (document.getElementById('favorites-container')) {
       renderFavoriteCards('favorites-container');
