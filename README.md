@@ -1,4 +1,4 @@
-# Smart Travel (Popular tourist attractions)
+# Popular tours for educational purposes
 
 โปรเจ็กต์เว็บรวมแหล่งท่องเที่ยวยอดนิยม พร้อมหน้าแนะนำสถานที่ รายการโปรด บทความ และแผนที่ แบบสแตติกโฮสต์ได้ผ่าน GitHub Pages
 
