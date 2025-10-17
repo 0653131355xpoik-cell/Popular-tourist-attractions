@@ -62,6 +62,34 @@ body {
     linear-gradient(135deg, #1e3a8a 0%, #172554 50%, #0f172a 100%);
   color: #e8f1f8;
   padding: 72px 0;
+  position: relative;
+  overflow: hidden;
+}
+/* เลเยอร์โอเวอร์เลย์สีเพื่อให้อ่านง่ายเมื่อมีวิดีโอพื้นหลัง */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1000px 300px at 85% -120%, rgba(30,58,138,.35) 0, transparent 60%),
+    radial-gradient(1000px 300px at 15% -150%, rgba(245,158,11,.22) 0, transparent 60%),
+    linear-gradient(135deg, rgba(30,58,138,.70) 0%, rgba(23,37,84,.60) 50%, rgba(15,23,42,.60) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+/* วิดีโอพื้นหลังใน Hero */
+.hero .bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.8) saturate(1.05);
+}
+/* จัดเลเยอร์คอนเทนต์ให้อยู่เหนือโอเวอร์เลย์ */
+.hero > .container {
+  position: relative;
+  z-index: 2;
 }
 .hero h1 {
   font-family: 'Poppins', 'Inter', sans-serif;
@@ -70,6 +98,21 @@ body {
 }
 .hero p.lead {
   color: #caddf0; /* คำโปรยอ่อนลงเล็กน้อยเพื่อบาลานซ์ภาพรวม */
+}
+/* หัวข้อ Hero: ใช้ Inter หนาและพิมพ์ใหญ่ */
+.hero .hero-title {
+  font-family: 'Inter', 'Poppins', 'Kanit', 'Roboto', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+/* คำโปรยใต้หัวข้อ: ใช้ Inter ขนาดเล็กลง */
+.hero .hero-subtitle {
+  font-family: 'Inter', 'Kanit', 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: clamp(18px, 2.6vw, 24px);
+  color: #caddf0;
+  margin-top: 6px;
 }
 
 .section-title { font-weight: 700; color: var(--primary); }
