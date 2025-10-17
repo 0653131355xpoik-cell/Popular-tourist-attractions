@@ -1,0 +1,21 @@
+# Normalize line endings and mark binaries
+* text=auto
+
+# Force LF for text-based web assets
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.svg  text eol=lf
+
+# Treat assets as binary (no line ending conversion)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.avif binary
+*.jfif binary
+*.mp4  binary
